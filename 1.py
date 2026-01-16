@@ -1,13 +1,7 @@
 import sys
 
-def celsius_to_fahrenheit(c):
-    return (c * 9/5) + 32
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python 1.py <celsius_temperature>")
-        print("Using default value: 25°C")
-        c = 25.0
-    else:
-        c = float(sys.argv[1])
-    print("Fahrenheit:", celsius_to_fahrenheit(c))
+if len(sys.argv) == 2:
+    script_name = sys.argv[0]
+    cel = float(sys.argv[1])
+    ferh = (cel * 9/5) + 32
+    print(f"{cel} Celsius is {ferh} Fahrenheit")
